@@ -1,7 +1,9 @@
 <h2 align=center>Calculator By Logan™ <h2>
 
 <input id="myText01"  type=text value="3"  > 
+
 <input id="myText02"  type=text value=""  > 
+
 <input id="myText03"  type=text value="4"  > <br>
 
 
@@ -100,16 +102,34 @@ document.getElementById('myText03').value += 0 * 1
 
 
 
+<input type="button" id="mySubtract" value="-"
+          onclick="{
+		  document.getElementById('myText02').value = '-'
+		  }">
 
-
-
+<input type="button" id="myMultiply" value="x"
+          onclick="{
+		  document.getElementById('myText02').value = '*'
+		  }">
+<input type="button" id="myDivide" value="/"
+          onclick="{
+		  document.getElementById('myText02').value = '/'
+		  }">
 <input type=button value="=" onClick="{  
    myNum1 = parseFloat(document.getElementById('myText01').value)
-   //mySign = document.getElementById('myText02').value
+   mySign = document.getElementById('myText02').value
    myNum2 = parseFloat(document.getElementById('myText03').value)
    
-      //if(mySign == '+'){
-      document.getElementById('myDiv01').innerHTML =  myNum1 + myNum2
+      
+	  myTotal = 0
+	  
+	  if (mySign == '+'){myTotal = myNum1 + myNum2 }
+	  if (mySign == '-'){myTotal = myNum1 - myNum2 }
+	  if (mySign == '*'){myTotal = myNum1 * myNum2 }
+	  if (mySign == '/'){myTotal = myNum1 / myNum2 }
+      
+	  
+	  document.getElementById('myDiv01').innerHTML +=  myNum1 + '' +  mySign + '' + myNum2 + '' + '=' + myTotal + '<br>'
 	  
 	
 
