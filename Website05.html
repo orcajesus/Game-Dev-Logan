@@ -4,9 +4,12 @@
    this.myStudentAge=myAge
    this.myStudentName=myName
    this.myStudentImage=myImage
-this.myShowInfo=function(){
-   document.getElementById('myDiv01').innerHTML +='My name is' + this.myStudentName + ' <br>'
- };
+this.myShowInfo = function(){
+	document.getElementById('myDiv01').innerHTML = ''
+	document.getElementById('myDiv01').innerHTML += 'My name is ' + this.myStudentName + ' <br>';
+	document.getElementById('myDiv01').innerHTML += 'My age is ' + this.myStudentAge + ' <br>';
+ document.getElementById('myDiv01').innerHTML += 'My Picture ' + '<img src=\'' + this.myStudentImage +'\'' + '</img> <br>';
+					};
 }
 
 </script>
