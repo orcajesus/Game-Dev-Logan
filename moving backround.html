@@ -1,0 +1,32 @@
+<body id="myBody"  style=" background-size:  cover; background-image: url('killme.jpeg'); background-repeat :  repeat-x	;  ">
+
+<input type=button value="Background Go" onClick="{
+       myX = 
+       myY = 0	
+       myCounter1 = setInterval(function(){   
+             myX += -8;
+             myY += -4	;
+             document.getElementById('myBody').style.backgroundPosition = myX + 'px';
+
+      }, 30);    // every 30 milliseconds
+
+}">
+
+
+<input type=button value="Background Stop" onclick="{
+   clearInterval( myCounter1)
+   alert('Background stopped at position ' +document.getElementById('myBody').style.backgroundPosition)
+
+}">
+
+<br> <br> <br>   &nbsp;  &nbsp; <img src ="https://derpicdn.net/img/2016/11/18/1298257/full.gif" height="40px" width="40px">
+<br>    &nbsp; &nbsp; &nbsp; &nbsp;  <img src ="https://derpicdn.net/img/2016/11/18/1298257/full.gif" height="40px" width="40px">
+<br>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src ="https://derpicdn.net/img/2016/11/18/1298257/full.gif" height="40px" width="40px">
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src ="https://derpicdn.net/img/2016/11/18/1298257/full.gif" height="40px" width="40px">
+<br>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  <img src ="https://derpicdn.net/img/2016/11/18/1298257/full.gif" height="40px" width="40px">
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src ="https://derpicdn.net/img/2016/11/18/1298257/full.gif" height="40px" width="40px">
+<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src ="https://derpicdn.net/img/2016/11/18/1298257/full.gif" height="40px" width="40px">
+<br> &nbsp; &nbsp; &nbsp; &nbsp;  <img src ="https://derpicdn.net/img/2016/11/18/1298257/full.gif" height="40px" width="40px">
+<br>  &nbsp; &nbsp;  <img src ="https://derpicdn.net/img/2016/11/18/1298257/full.gif" height="40px" width="40px">
+
+</body>
