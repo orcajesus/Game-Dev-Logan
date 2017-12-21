@@ -74,7 +74,10 @@ document.getElementById('myB').style.top=parseInt(document.getElementById('myB')
 }
 
 if (myCollide('myA', 'myB')  == true) {
-	document.getElementById('score').value = parseInt(document.getElementById('score').value) +1;
+if (score[0] == '2') {	
+alert('You Win')
+location = 'http://www.google.ca'
+}	document.getElementById('score').value = parseInt(document.getElementById('score').value) +1;
 	score[0] = score[0] + 1;
 	document.getElementById('myOut01').innerHTML =  'You hit me!';
     document.getElementById('myA').style.left = 250 + 'px'
