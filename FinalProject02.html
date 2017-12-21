@@ -1,0 +1,102 @@
+<script>
+
+function myCollide(my1, my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) && (bottom1 >=  top2   ) && (left1   <=  right2 ) && (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+
+
+
+</script>
+
+<body id="myBody" style=" background-size:  cover; background-image: url('killme.jpeg'); background-repeat :  repeat-x	;  " onload="{
+score = new Array();
+score[0] = 0;
+}" onkeydown="{
+setInterval(function(){
+if (score[0] == '3') {	
+document.body.style.backgroundImage='url(http://justingammon.com/jg2015/wp-content/uploads/2015/02/bacon-egg-dance2.gif)'
+}
+}, 50)
+ //	alert(String.fromCharCode(event.keyCode))
+ 
+ 
+if((String.fromCharCode(event.keyCode)) == 'D'){
+    document.getElementById('myA').style.left=parseInt(document.getElementById('myA').style.left) + 25 + 'px'
+    //document.getElementById('myA').src = 'gingerbread02.jpg'
+}
+ 
+ 
+ if((String.fromCharCode(event.keyCode)) == 'S'){
+document.getElementById('myA').style.top=parseInt(document.getElementById('myA').style.top) + 25 + 'px'
+//document.getElementById('myA').src = 'gingerbread man.jpg'
+}
+
+if((String.fromCharCode(event.keyCode)) == 'A'){
+document.getElementById('myA').style.left = parseInt(document.getElementById('myA').style.left) + -25 + 'px'
+
+//document.getElementById('myA').src = 'gingerbread.jpg'
+}
+
+
+if((String.fromCharCode(event.keyCode)) == 'W'){
+document.getElementById('myA').style.top = parseInt(document.getElementById('myA').style.top) + -25 + 'px'
+//document.getElementById('myA').src = 'ginger.jpg'
+}
+
+document.getElementById('myOut01').innerHTML = document.getElementById('myA').style.left + ' ,  '+ document.getElementById('myB').style.left
+
+if((String.fromCharCode(event.keyCode)) == 'L'){
+document.getElementById('myB').style.left=parseInt(document.getElementById('myB').style.left) + 25 + 'px'
+}
+
+if((String.fromCharCode(event.keyCode)) == 'K'){
+document.getElementById('myB').style.top=parseInt(document.getElementById('myB').style.top) + 25 + 'px'
+}
+
+if((String.fromCharCode(event.keyCode)) == 'J'){
+document.getElementById('myB').style.left=parseInt(document.getElementById('myB').style.left) + -25 + 'px'
+}
+
+if((String.fromCharCode(event.keyCode)) == 'I'){
+document.getElementById('myB').style.top=parseInt(document.getElementById('myB').style.top) + -25 + 'px'
+}
+
+if (myCollide('myA', 'myB')  == true) {
+	document.getElementById('score').value = parseInt(document.getElementById('score').value) +1;
+	score[0] = score[0] + 1;
+	document.getElementById('myOut01').innerHTML =  'You hit me!';
+    document.getElementById('myA').style.left = 250 + 'px'
+    document.getElementById('myB').style.left = 50 + 'px'
+    document.getElementById('myA').style.top = 250 + 'px'
+    document.getElementById('myB').style.top = 250 + 'px'
+}
+
+}">
+<input type="number" id="score" value="0" readonly="" style="">
+
+
+
+<img id="myB" src="http://rs921.pbsrc.com/albums/ad60/moonlit-sonnet0/Animation%20and%20Comics/Pokemon/Players/Female/FRLG_Leaf-1.gif~c200" style="transform: scaleX(-1); position: absolute; width: 50px; height: 50px; left: 125px; top: 300px;">  
+ 
+<br><br><br><br>
+<img id="myA" src="https://orig00.deviantart.net/bd33/f/2014/234/2/a/orionanbetter2_by_demintai_eclipse-d7w8pee.gif" style="transform: scaleX(-1); position:absolute; width:100px; height:100px; left:250px; top:250px">  
+<input type="button" value="dksfj" onclick="{alert(score[0])}">
+<div id="myOut01">250px ,  125px</div>
+
+
+
+	
+
+</body>
